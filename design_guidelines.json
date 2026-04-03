@@ -1,0 +1,113 @@
+{
+  "theme": "dark",
+  "archetype": "Archetype 5 (Jewel & Luxury)",
+  "emotional_tone": "Cinematic, Expensive, Dominant, Trustworthy",
+  "design_context": "Hybrid (High-end Marketing pages + Data-heavy Admin Dashboard)",
+  "colors": {
+    "background": {
+      "main": "#050505",
+      "surface": "#0A0A0A",
+      "glass": "rgba(10, 10, 10, 0.6)"
+    },
+    "primary": {
+      "DEFAULT": "#FFFFFF",
+      "muted": "rgba(255, 255, 255, 0.6)",
+      "glow": "rgba(255, 255, 255, 0.15)"
+    },
+    "accent": {
+      "DEFAULT": "#D4AF37", 
+      "hover": "#F3E5AB",
+      "muted": "rgba(212, 175, 55, 0.2)"
+    },
+    "danger": {
+      "DEFAULT": "#FF3B30",
+      "muted": "rgba(255, 59, 48, 0.2)"
+    },
+    "border": {
+      "subtle": "rgba(255, 255, 255, 0.08)",
+      "focus": "rgba(255, 255, 255, 0.3)"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": "'Outfit', sans-serif",
+      "body": "'Manrope', sans-serif",
+      "mono": "'JetBrains Mono', monospace"
+    },
+    "scale": {
+      "h1": "text-5xl md:text-6xl tracking-tighter font-light",
+      "h2": "text-3xl md:text-4xl tracking-tight font-medium",
+      "h3": "text-2xl tracking-tight",
+      "h4": "text-xl",
+      "body": "text-base leading-relaxed text-white/70",
+      "overline": "text-xs tracking-[0.2em] uppercase text-white/50"
+    }
+  },
+  "spacing": {
+    "section_padding": "py-24 md:py-32",
+    "container_padding": "px-6 md:px-12",
+    "gap_large": "gap-12 md:gap-16",
+    "gap_medium": "gap-6 md:gap-8",
+    "gap_small": "gap-4"
+  },
+  "surfaces": {
+    "hero_overlay": "bg-black/40 bg-gradient-to-t from-[#050505] to-transparent",
+    "glass_card": "backdrop-blur-xl bg-white/[0.02] border border-white/[0.05] shadow-[0_8px_32px_rgba(0,0,0,0.5)]",
+    "dashboard_card": "bg-[#0A0A0A] border border-white/[0.08] rounded-none",
+    "bento_item": "bg-gradient-to-br from-white/[0.03] to-transparent border border-white/[0.05]"
+  },
+  "components": {
+    "button_primary": "bg-white text-black font-medium px-8 py-4 uppercase tracking-wider hover:bg-gray-200 transition-colors duration-300",
+    "button_outline": "border border-white/20 text-white px-8 py-4 uppercase tracking-wider hover:bg-white/10 transition-colors duration-300 backdrop-blur-md",
+    "input_field": "bg-white/[0.03] border-b border-white/20 focus:border-white text-white px-4 py-3 outline-none transition-colors w-full",
+    "navigation": "fixed w-full z-50 backdrop-blur-xl bg-[#050505]/80 border-b border-white/[0.05]",
+    "footer": "bg-[#020202] py-20 border-t border-white/[0.05]"
+  },
+  "motion": {
+    "hover_lift": "-translate-y-1 transition-transform duration-300",
+    "page_transition": "framer-motion opacity and slight y-axis translation on mount",
+    "scroll_reveal": "staggered fade-up using framer-motion while in view",
+    "smooth_scroll": "Lenis library for momentum scrolling"
+  },
+  "layout_strategies": {
+    "marketing": "Asymmetric bento grids, overlapping hero elements, massive negative space (p-20+), sticky sections.",
+    "dashboard": "Dense 'Control Room' grid layout, sharp edges (rounded-none), pure monochrome utilitarian focus, strict table alignments."
+  },
+  "media": {
+    "hero_image": {
+      "url": "https://images.pexels.com/photos/31298995/pexels-photo-31298995.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Elegant side view of a black sports car against a dark backdrop. Use as main landing page hero."
+    },
+    "about_showroom": {
+      "url": "https://images.pexels.com/photos/17632052/pexels-photo-17632052.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Showroom featuring luxury sports cars, Lamborghini models. Use for About Us / Dealership section."
+    },
+    "interior_detail": {
+      "url": "https://images.unsplash.com/photo-1768760819947-f6772ae3f433?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBjYXIlMjBjaW5lbWF0aWMlMjBkYXJrfGVufDB8fHx8MTc3NTE5MjAwNXww&ixlib=rb-4.1.0&q=85",
+      "description": "Close-up of a vintage mercedes-benz steering wheel. Use for Quality/Craftsmanship bento box."
+    },
+    "featured_vehicle_1": {
+      "url": "https://images.unsplash.com/photo-1753792707171-162cc17211ca?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBjYXIlMjBjaW5lbWF0aWMlMjBkYXJrfGVufDB8fHx8MTc3NTE5MjAwNXww&ixlib=rb-4.1.0&q=85",
+      "description": "Red BMW parked at night. Use in inventory/featured."
+    },
+    "featured_vehicle_2": {
+      "url": "https://images.unsplash.com/photo-1760713164476-7eb5063b3d07?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBjYXIlMjBjaW5lbWF0aWMlMjBkYXJrfGVufDB8fHx8MTc3NTE5MjAwNXww&ixlib=rb-4.1.0&q=85",
+      "description": "Dark blue SUV parked on a reflective surface. Use in inventory/featured."
+    },
+    "outdoor_dealership": {
+      "url": "https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Luxury cars lined up at an outdoor dealership. Use for Contact / Location section."
+    }
+  },
+  "icons": "lucide-react with thin weights (strokeWidth={1.5}) to match the luxury aesthetic.",
+  "instructions_to_main_agent": [
+    "Ensure dark mode is forced on the marketing site. Admin dashboard can be purely utilitarian dark mode.",
+    "Do NOT use standard Shadcn Cards for the marketing pages. Build custom bento grids with raw divs using the `glass_card` surface styles.",
+    "Use framer-motion to create a 'tracing beam' or subtle glow effect on hover for the featured vehicle cards.",
+    "Implement Lenis for smooth momentum scrolling to give a premium automotive feel.",
+    "All navigation and form buttons must use high-contrast text and strictly defined hover states (e.g., bg-white text-black to hover:bg-gray-200).",
+    "For the hero section, ensure the overlay (`bg-black/40`) allows the car image to punch through visually without compromising text readability. Use text-shadow if needed.",
+    "Ensure all interactive elements have data-testid attributes.",
+    "Dashboards must use strict table alignments and 'Control Room' grid layout with sharp edges."
+  ]
+}
