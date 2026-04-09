@@ -58,11 +58,11 @@ export default function Contact() {
                     <item.icon size={16} className="text-[#D4AF37]" />
                   </div>
                   <div>
-                    <p className="text-white/30 text-xs font-body tracking-wider uppercase mb-1">{item.label}</p>
+                    <p className="text-white/35 text-xs font-body tracking-wider uppercase mb-1">{item.label}</p>
                     {item.href ? (
-                      <a href={item.href} className="text-white font-body text-sm hover:text-[#D4AF37] transition-colors">{item.value}</a>
+                      <a href={item.href} className="text-white font-body text-base hover:text-[#D4AF37] transition-colors">{item.value}</a>
                     ) : (
-                      <p className="text-white font-body text-sm">{item.value}</p>
+                      <p className="text-white font-body text-base">{item.value}</p>
                     )}
                   </div>
                 </div>
@@ -73,10 +73,10 @@ export default function Contact() {
                   <Clock size={16} className="text-[#D4AF37]" />
                 </div>
                 <div>
-                  <p className="text-white/30 text-xs font-body tracking-wider uppercase mb-2">Hours</p>
+                  <p className="text-white/35 text-xs font-body tracking-wider uppercase mb-2">Hours</p>
                   <div className="space-y-1">
-                    <p className="text-white font-body text-sm">Mon – Fri: 9:00 AM – 8:00 PM</p>
-                    <p className="text-white font-body text-sm">Sat – Sun: 10:00 AM – 6:00 PM</p>
+                    <p className="text-white font-body text-base">Mon – Fri: 9:00 AM – 8:00 PM</p>
+                    <p className="text-white font-body text-base">Sat – Sun: 10:00 AM – 6:00 PM</p>
                   </div>
                 </div>
               </div>
@@ -86,8 +86,8 @@ export default function Contact() {
           {/* Right: Contact Form */}
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }}>
             <div className="glass-card p-8">
-              <h2 className="font-heading text-xl font-medium text-white mb-2">Send Us a Message</h2>
-              <p className="text-white/40 font-body text-sm mb-8">We respond to all inquiries within 2 business hours.</p>
+              <h2 className="font-heading text-2xl font-semibold text-white mb-2">Send Us a Message</h2>
+              <p className="text-white/45 font-body text-base mb-8">We respond to all inquiries within 2 business hours.</p>
 
               {submitted ? (
                 <div className="text-center py-12">

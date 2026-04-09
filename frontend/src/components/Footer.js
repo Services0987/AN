@@ -17,7 +17,7 @@ export default function Footer() {
                 <p className="text-white/40 text-xs tracking-[0.15em] uppercase">Motors</p>
               </div>
             </div>
-            <p className="text-white/40 text-sm font-body leading-relaxed mb-6">
+            <p className="text-white/45 text-sm font-body leading-relaxed mb-6">
               Edmonton's premier destination for quality vehicles. Trusted by thousands of satisfied customers across Alberta.
             </p>
             <div className="flex gap-4">

@@ -17,7 +17,7 @@ const CONDITIONS = ['All', 'new', 'used'];
 function FilterSelect({ label, value, options, onChange, testId }) {
   return (
     <div className="relative">
-      <label className="text-[10px] tracking-[0.15em] uppercase text-white/30 font-heading block mb-1.5">{label}</label>
+      <label className="text-xs tracking-[0.15em] uppercase text-white/40 font-heading block mb-1.5">{label}</label>
       <div className="relative">
         <select
           value={value}
@@ -131,7 +131,7 @@ export default function Inventory() {
             </button>
           )}
 
-          <span className="text-white/30 text-xs font-body ml-auto">{total} vehicle{total !== 1 ? 's' : ''} found</span>
+          <span className="text-white/40 text-sm font-body ml-auto">{total} vehicle{total !== 1 ? 's' : ''} found</span>
         </div>
 
         {showFilters && (
@@ -167,8 +167,8 @@ export default function Inventory() {
         ) : vehicles.length === 0 ? (
           <div className="text-center py-24">
             <div className="text-6xl mb-4">🔍</div>
-            <h3 className="font-heading text-white text-xl mb-2">No vehicles found</h3>
-            <p className="text-white/40 font-body text-sm mb-6">Try adjusting your filters to see more results.</p>
+            <h3 className="font-heading text-white text-2xl mb-3">No vehicles found</h3>
+            <p className="text-white/45 font-body text-base mb-6">Try adjusting your filters to see more results.</p>
             <button onClick={clearFilters} className="btn-gold px-6 py-3 text-sm" data-testid="no-results-clear-btn">Clear All Filters</button>
           </div>
         ) : (

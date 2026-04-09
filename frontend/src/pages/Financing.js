@@ -45,9 +45,9 @@ export default function Financing() {
           <h1 className="font-heading text-4xl md:text-5xl font-light text-white tracking-tight mb-4">
             Your Road to <span className="gradient-text">Ownership</span>
           </h1>
-          <p className="text-white/50 font-body max-w-xl leading-relaxed">
-            Fast approvals, competitive rates, and flexible terms. We work with all credit profiles.
-          </p>
+              <p className="text-white/50 font-body text-lg max-w-xl leading-relaxed mb-8">
+                Fast approvals, competitive rates, and flexible terms. We work with all credit profiles.
+              </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -58,7 +58,7 @@ export default function Financing() {
                 <div className="w-10 h-10 bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center">
                   <Calculator size={18} className="text-[#D4AF37]" />
                 </div>
-                <h2 className="font-heading text-lg font-medium text-white">Payment Calculator</h2>
+                <h2 className="font-heading text-xl font-semibold text-white">Payment Calculator</h2>
               </div>
 
               {[
@@ -69,8 +69,8 @@ export default function Financing() {
               ].map((item) => (
                 <div key={item.key} className="mb-6">
                   <div className="flex justify-between items-center mb-2">
-                    <label className="text-white/50 text-xs font-body tracking-wider uppercase">{item.label}</label>
-                    <span className="text-white font-heading text-sm font-medium">
+                    <label className="text-white/50 text-sm font-body tracking-wider uppercase">{item.label}</label>
+                    <span className="text-white font-heading text-base font-semibold">
                       {item.prefix}{typeof item.value === 'number' ? item.value.toLocaleString() : item.value}{item.suffix}
                     </span>
                   </div>
@@ -94,19 +94,19 @@ export default function Financing() {
 
               <div className="bg-[#D4AF37]/5 border border-[#D4AF37]/20 p-6 text-center">
                 <p className="text-white/40 text-xs tracking-widest uppercase font-heading mb-2">Estimated Monthly Payment</p>
-                <p className="font-heading text-5xl font-semibold text-[#D4AF37]" data-testid="monthly-payment">
+                <p className="font-heading text-5xl font-bold text-[#D4AF37]" data-testid="monthly-payment">
                   ${isNaN(monthlyPayment) ? '0' : monthlyPayment.toFixed(0)}
                 </p>
-                <p className="text-white/30 text-xs font-body mt-2">/month for {calc.term} months</p>
-                <p className="text-white/20 text-xs font-body mt-1">Principal: ${principal.toLocaleString()} · Rate: {calc.rate}% APR</p>
+                <p className="text-white/40 text-sm font-body mt-2">/month for {calc.term} months</p>
+                <p className="text-white/25 text-xs font-body mt-1">Principal: ${principal.toLocaleString()} · Rate: {calc.rate}% APR</p>
               </div>
             </div>
 
             <div className="glass-card p-6">
-              <h3 className="font-heading text-sm font-medium text-white mb-4">Why Finance with AutoNorth?</h3>
+              <h3 className="font-heading text-base font-semibold text-white mb-4">Why Finance with AutoNorth?</h3>
               <ul className="space-y-3">
                 {['Competitive rates from 3.99% APR', 'Quick 10-minute pre-approval', 'All credit profiles welcome', 'Flexible terms 12-96 months', 'Trade-in accepted towards down payment'].map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-white/50 font-body text-sm">
+                  <li key={item} className="flex items-center gap-3 text-white/55 font-body text-base">
                     <Check size={14} className="text-[#D4AF37] flex-shrink-0" />
                     {item}
                   </li>
@@ -118,8 +118,8 @@ export default function Financing() {
           {/* Pre-Approval Form */}
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }}>
             <div className="glass-card p-8" data-testid="pre-approval-form">
-              <h2 className="font-heading text-lg font-medium text-white mb-2">Get Pre-Approved Today</h2>
-              <p className="text-white/40 font-body text-sm mb-8">Complete the form below and receive a decision within hours.</p>
+              <h2 className="font-heading text-2xl font-semibold text-white mb-2">Get Pre-Approved Today</h2>
+              <p className="text-white/45 font-body text-base mb-8">Complete the form below and receive a decision within hours.</p>
 
               {submitted ? (
                 <div className="text-center py-12">
@@ -152,7 +152,7 @@ export default function Financing() {
                     {sending ? 'Processing...' : 'Submit Pre-Approval Application'} {!sending && <ChevronRight size={16} />}
                   </button>
 
-                  <p className="text-white/20 text-xs font-body text-center">By submitting, you agree to be contacted by our finance team. Your information is secure and never shared.</p>
+                  <p className="text-white/25 text-xs font-body text-center">By submitting, you agree to be contacted by our finance team. Your information is secure and never shared.</p>
                 </form>
               )}
             </div>
