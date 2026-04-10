@@ -413,7 +413,7 @@ async def startup():
     if await db.vehicles.count_documents({}) == 0:
         await seed_vehicles()
 
-    pathlib.Path("/app/memory").mkdir(exist_ok=True)
+    pathlib.Path("./memory").mkdir(exist_ok=True)
     with open("/app/memory/test_credentials.md", "w") as f:
         f.write(f"# AutoNorth Motors Test Credentials\n\n## Admin\n- Email: {admin_email}\n- Password: {admin_password}\n")
 
