@@ -414,7 +414,7 @@ async def startup():
         await seed_vehicles()
 
     pathlib.Path("./memory").mkdir(exist_ok=True)
-    with open("/app/memory/test_credentials.md", "w") as f:
+    with open("./memory/test_credentials.md", "w") as f:
         f.write(f"# AutoNorth Motors Test Credentials\n\n## Admin\n- Email: {admin_email}\n- Password: {admin_password}\n")
 
 
