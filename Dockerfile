@@ -1,18 +1,21 @@
-# 1. Use Node.js
-FROM node:18-alpine
+# Use Python
+FROM python:3.10-slim
 
-# 2. Set work directory
+# Set work directory
 WORKDIR /app
 
-# 3. Copy only the necessary folders
-COPY backend/ ./backend/
-COPY frontend/ ./frontend/
+# Copy all files
+COPY . .
 
-# 4. Install dependencies using the --legacy-peer-deps flag to fix the error
-RUN cd frontend && npm install --legacy-peer-deps
+# Install dependencies from your backend folder
+RUN pip install --no-cache-dir -r backend/requirements.txt
 
-# 5. Set the port (Ensure this is 8080 in Back4app settings)
-EXPOSE 8080
+# Set port environment variable
+ENV PORT=8000
 
-# 6. Start the server directly
-CMD ["node", "backend/server.js"]
+# Expose the port
+EXPOSE 8000
+
+# Run FastAPI with uvicorn
+# This points to: backend folder -> server.py file -> app variable
+CMD ["uvicorn", "backend.server:app", "--host", "0.0.0.0", "--port", "8000"]
