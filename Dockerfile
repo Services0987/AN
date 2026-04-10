@@ -1,18 +1,19 @@
-# 1. Build Stage: Use Node to install dependencies from the frontend folder
+# 1. Use a very small Node image to save space
 FROM node:18-alpine
 
-# 2. Set the working directory
+# 2. Set work directory
 WORKDIR /app
 
-# 3. Copy everything into the container
-COPY . .
+# 3. ONLY copy the backend folder and the frontend's package files
+# This stops the container from getting too heavy
+COPY backend/ ./backend/
+COPY frontend/package*.json ./frontend/
 
-# 4. Install dependencies using the package.json found in the frontend folder
-RUN cd frontend && npm install
+# 4. Install dependencies inside the frontend folder
+RUN cd frontend && npm install --production
 
-# 5. Expose the port your server uses (ensure this matches your code)
+# 5. Set the port (Ensure this is 8080 in Back4app settings)
 EXPOSE 8080
 
-# 6. Start the server located in the backend folder
-# This command goes into 'backend' and runs the server directly
+# 6. Start the server directly
 CMD ["node", "backend/server.js"]
