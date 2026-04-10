@@ -17,4 +17,4 @@ RUN sed -i '/emergentintegrations/d' backend/requirements.txt && \
 ENV PORT=3000
 EXPOSE 3000
 
-CMD ["uvicorn", "backend.server:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "backend.server:app", "--host", "0.0.0.0", "--port", "3000"]
