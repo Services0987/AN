@@ -1,18 +1,17 @@
-# Use the official Node.js image
+# Use Node.js
 FROM node:18-alpine
 
-# Set the working directory inside the container
+# Set the working directory
 WORKDIR /app
 
-# Copy package files and install dependencies
-COPY package*.json ./
-RUN npm install
-
-# Copy the rest of your project files
+# Copy all files
 COPY . .
 
-# Expose the port your app uses (Back4app needs to know this)
+# Move into backend, install, and build
+RUN cd backend && npm install
+
+# Match the port you set in Back4app
 EXPOSE 8080
 
-# Command to start your application
-CMD ["npm", "start"]
+# Run the backend
+CMD ["sh", "-c", "cd backend && npm start"]
