@@ -17,7 +17,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 from bson import ObjectId
 from pydantic import BaseModel, Field, BeforeValidator, ConfigDict
-from emergentintegrations.llm.chat import LlmChat, UserMessage
+#from emergentintegrations.llm.chat import LlmChat, UserMessage
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
