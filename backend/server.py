@@ -32,7 +32,7 @@ api_router = APIRouter(prefix="/api")
 FRONTEND_URL = os.environ.get("FRONTEND_URL", "http://localhost:3000")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[FRONTEND_URL, "http://localhost:3000"],
+    allow_origins=[FRONTEND_URL, "https://onrender.com"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
