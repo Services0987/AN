@@ -1,17 +1,17 @@
-# Use Node.js
+# 1. Use Node.js
 FROM node:18-alpine
 
-# Set the working directory
+# 2. Set the working directory
 WORKDIR /app
 
-# Copy all files
+# 3. Copy everything
 COPY . .
 
-# Move into backend, install, and build
+# 4. Install dependencies specifically INSIDE the backend folder
 RUN cd backend && npm install
 
-# Match the port you set in Back4app
+# 5. Set the port (Back4app uses 8080 by default)
 EXPOSE 8080
 
-# Run the backend
+# 6. Start the server from the backend folder
 CMD ["sh", "-c", "cd backend && npm start"]
