@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Send, Minimize2, Sparkles, Phone, CheckCircle } from 'lucide-react';
 import axios from 'axios';
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = "https://an-3qbs.onrender.com/api";
 
 function getSessionId() {
   const key = 'an_ai_session';
